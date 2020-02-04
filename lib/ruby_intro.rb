@@ -61,8 +61,9 @@ def binary_multiple_of_4? s
   # YOUR CODE HERE
   if s.empty?
     return false
-  elsif /(\A\d+\z)/ =~ s
-    if s.to_i % 4 == 0
+  # elsif /(\A\d+\z)/ =~ s
+  elsif /\b[01]+\b/ =~ s
+    if s.to_i(2) % 4 == 0
       return true
     else
       return false
