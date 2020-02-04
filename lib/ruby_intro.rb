@@ -76,22 +76,12 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  attr_accessor :isbn
+  attr_accessor :price
   def initialize(isbn, price)
     @isbn = isbn
     @price = price
     raise ArgumentError if @isbn == "" || @price <= 0
-  end
-  def isbn
-    return @isbn
-  end
-  def price
-    return @price
-  end
-  def isbn=(isbn)
-    return @isbn = isbn
-  end
-  def price=(price)
-    return @price = price
   end
   def price_as_string
     price_string = @price.to_s
